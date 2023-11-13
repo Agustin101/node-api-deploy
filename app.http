@@ -1,0 +1,34 @@
+GET http://localhost:3000/movies
+
+###
+GET http://localhost:3000/movies/b6e03689-cccd-478e-8565-d92f40813b13
+
+###
+GET http://localhost:3000/movies?genre=Action&duration=201
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+  {
+    "title": "IT: Chapter one",
+    "year": 2017,
+    "director": "Andrés Muschietti",
+    "duration": 201,
+    "poster": "https://blogs.colum.edu/intheloop/files/2017/09/it_ver3_xlg.jpg",
+    "genre": [
+      "Terror"
+    ]
+  }
+
+###
+PATCH  http://localhost:3000/movies/b6e03689-cccd-478e-8565-d92f40813b13
+Content-Type: application/json
+
+{
+  "year": 2004,
+  "title": "Hola mundito"
+}
+
+###
+DELETE http://localhost:3000/movies/b6e03689-cccd-478e-8565-d92f40813b13
